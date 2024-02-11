@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-size: 1.6rem;
+
+}
+
+body {
+  background: #040924;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.card {
+  border-radius: 0.6rem;
+  background: #FFF;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.10);
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1 {
+  margin-bottom: 3.2rem;
+  color: #0C3440;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.0rem;
+}
+
+.card label {
+  color:#00453A;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.card input {
+  margin-bottom: 1.6rem;
+  width: 30rem;
+  padding: 1.6rem;
+  color: #212529;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.0rem;
+  border-radius: 0.4rem;
+  border: .1rem solid #02799D;
+  background: #DCE2E9;
+}
+
+form input:focus {
+  border: .2rem solid #062731;
+  outline: 2px solid  ;
+}
+
+form button {
+  margin-top: 1.6rem;
+  width: 30rem;
+  padding: 1.6rem;
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.0rem;
+  border-radius: 0.4rem;
+  background: #02799D;
+  border: none;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+ 
+}
+
+form button img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+form button:hover {
+  background-color: #042b37;
+  cursor: pointer;
+}
+
+.card input::placeholder {
+  color: rgba(73, 80, 87, 0.50);
+
+}
+
+
+/* modal/popup */
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  background: rgba(0, 0, 0, 0.70);
+  position: absolute;
+  display: grid;
+  place-content: center;  
+
+  inset: 0;    /* ESSA PROPRIEDADE SUBSTITUI TOP, BOTTON, LEFT E RIGHT 0  */
+  /* top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; */
+
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.modal {
+  position: relative;
+}
+
+.modal-wrapper h2 {
+  color: #0C3440;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.0rem;
+
+
+
+}
+
+.modal button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  transition: transform .3s;
+  
+}
+
+.modal img {
+  width: 2.4rem;
+  height: 2.4rem;
+ }
+
+ .modal button:hover {
+  transform: scale(1.4);
+ }
+
+.alert-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #F03E3E;
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem; 
+  padding: 1.6rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
